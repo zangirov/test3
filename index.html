@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="prism.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <button class="button button_hover">
+        <span class="button__title">Получить список</span>
+      </button>
+    </div>
+    <div>
+      <h2>Дополнительное задание</h2>
+    <pre><code class="language-javascript">
+    setTimeout(() => {
+      const arr = [1 , 2 , 3];
+    
+      const mapFunc = (item, index, array) => {
+      console.log(item, index);
+    }
+    
+      const map = (array, 
+      mapFunc) => {
+      const mappedArray = [];
+      for (i = 0; i < array.length; i++) {
+        const result = mapFunc(array[i], i, array);
+        mappedArray.push(result);
+      }
+      return mappedArray;
+    }
+      const operation = map(arr, item => item*2)
+      console.log(operation);
+      const BODY = document.querySelector("body");
+      const DIV = document.createElement("div");
+      BODY.appendChild(DIV);
+    }, 0)
+  </code></pre>
+</div>
+    <script src="index.js"></script>
+    <script src="prism.js"></script>
+  </body>
+</html>
